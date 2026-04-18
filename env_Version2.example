@@ -1,0 +1,74 @@
+# ============================================================================
+# DATABASE CONFIGURATION
+# ============================================================================
+MONGODB_URI=mongodb://localhost:27017/voting_system
+NODE_ENV=development
+
+# ============================================================================
+# SERVER CONFIGURATION
+# ============================================================================
+PORT=5000
+CLIENT_URL=http://localhost:3000
+
+# ============================================================================
+# JWT CONFIGURATION
+# ============================================================================
+JWT_SECRET=your_super_secret_jwt_key_change_this_in_production_12345
+JWT_EXPIRE=7d
+JWT_REFRESH_SECRET=your_refresh_token_secret_key_change_this
+JWT_REFRESH_EXPIRE=30d
+
+# ============================================================================
+# EMAIL CONFIGURATION (Nodemailer - Gmail SMTP)
+# ============================================================================
+EMAIL_SERVICE=gmail
+EMAIL_USER=your_email@gmail.com
+EMAIL_PASSWORD=your_app_specific_password
+EMAIL_FROM_NAME=Secure Voting System
+EMAIL_FROM_ADDRESS=voting@system.com
+
+# ============================================================================
+# SMS CONFIGURATION (Twilio)
+# ============================================================================
+TWILIO_ACCOUNT_SID=your_twilio_account_sid
+TWILIO_AUTH_TOKEN=your_twilio_auth_token
+TWILIO_PHONE_NUMBER=+1234567890
+
+# ============================================================================
+# OTP CONFIGURATION
+# ============================================================================
+OTP_EXPIRY_TIME=600
+OTP_LENGTH=6
+OTP_MAX_ATTEMPTS=5
+
+# ============================================================================
+# FACE RECOGNITION CONFIGURATION
+# ============================================================================
+FACE_API_KEY=your_face_api_key_if_using_real_api
+FACE_API_ENDPOINT=https://api.example.com/face
+ENABLE_FACE_VERIFICATION=true
+
+# ============================================================================
+# SECURITY CONFIGURATION
+# ============================================================================
+ACCOUNT_LOCK_DURATION=1800000
+MAX_FAILED_LOGIN_ATTEMPTS=5
+SESSION_TIMEOUT=3600000
+PASSWORD_MIN_LENGTH=8
+REQUIRE_SPECIAL_CHARACTERS=true
+
+# ============================================================================
+# VOTING CONFIGURATION
+# ============================================================================
+ENABLE_VOTING=true
+VOTE_START_TIME=2024-01-01T09:00:00Z
+VOTE_END_TIME=2024-01-01T18:00:00Z
+ALLOW_MULTIPLE_VOTING=false
+
+# ============================================================================
+# NOTIFICATION CONFIGURATION
+# ============================================================================
+SEND_EMAIL_OTP=true
+SEND_SMS_OTP=true
+SEND_SUSPICIOUS_ALERTS=true
+SEND_VOTING_CONFIRMATION=true
